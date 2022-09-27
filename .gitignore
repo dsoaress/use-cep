@@ -1,0 +1,22 @@
+# Logs
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+
+# Dependency directories
+node_modules/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Distribution files
+dist/
+
+# Miscellaneous
+.DS_Store
