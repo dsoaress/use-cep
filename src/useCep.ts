@@ -16,10 +16,10 @@ export function useCep() {
 
   useEffect(() => {
     if (cep) {
-      setStatus(prev => ({ ...prev, isLoading: true }))
+      setStatus({ ...initialStatus, isLoading: true })
       getCepData(String(cep))
         .then(data => setStatus(prev => ({ ...prev, data })))
-        .catch(error => setStatus(prev => ({ ...prev, isError: true, error })))
+        .catch(error => setStatus(prev => ({ ...prev, isError: true, error: error?.message })))
         .finally(() => setStatus(prev => ({ ...prev, isLoading: false })))
     }
   }, [cep])
